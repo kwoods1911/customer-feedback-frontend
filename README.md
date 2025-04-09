@@ -1,12 +1,47 @@
-# React + Vite
+#  Customer Feedback Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a lightweight React single-page application (SPA) that interacts with the Laravel-based Customer Feedback API. Users can submit their feedback, see recent submissions, and filter feedback by satisfaction rating (using emojis).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Requirements
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js >= 22
+- NPM >= 10
+- Vite (bundler used for development)
+
+
+## Installation Instructions
+
+### 1. Clone the Repository
+
+
+git clone https://github.com/kwoods1911/customer-feedback-frontend.git
+cd customer-feedback-frontend
+
+
+### 2. Install Dependencies
+
+npm install
+
+### 3. Set Up environment Variables
+
+cp .env.example .env
+
+VITE_API_URL=http://127.0.0.1:8000/api/feedback
+
+### 4. Run the application
+
+npm run dev
+
+
+### 4. Project Structure
+src/
+├── components/
+│   ├── CustomerFeedbackForm.jsx
+│   ├── CustomerFeedbackList.jsx
+├── services/
+│   └── api.js
+├── App.jsx
+├── main.jsx
